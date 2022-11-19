@@ -1,0 +1,532 @@
+:root {
+	--main-bg-color: #FFF5F5;
+	--footer-bg-color: #956A6B;
+
+	--font-color-dark: #372018;
+	--font-color-light: #FFE8EB;
+
+	--fs-900: 9rem;
+	--fs-600: 3rem;
+	--fs-400: 1.4rem;
+}
+
+
+
+/* --------------------------- */
+/* Reset                       */
+/* --------------------------- */
+
+/* Box sizing  */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+p,
+ul,
+figure,
+picture {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+video {
+	width: 100%;
+	height: 100%;
+}
+
+/*video::-webkit-media-controls-panel {
+	display: none !important;
+	opacity: 1 !important;
+}*/
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Set up default root font size */
+html {
+	font-size: 62.5%; /* 10px */
+}
+
+/* Set up the body */
+body {
+	font-family: 'Work Sans', sans-serif;
+	font-size: var(--fs-400);
+	font-weight: 300;
+	color: var(--font-color-dark);
+	line-height: 1.5;
+	min-height: 100vh;
+	background-color: var(--main-bg-color);
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+h2 {
+	font-size: var(--fs-600);
+	line-height: 1.2;
+}
+
+section:not(:first-child) {
+	padding-top: 7rem;
+}
+
+section:last-child {
+	padding-bottom: 5rem;
+}
+
+/* Utility classes */
+.wrapper {
+	width: 90%;
+	max-width: 1200px;
+	margin-inline: auto;
+}
+
+.decorative-font {
+	font-family: 'Great Vibes', cursive;
+	font-weight: 400;
+}
+
+.light-text {
+	color: var(--font-color-light);
+}
+
+
+/* Header */
+.main-header {
+	width: 100%;
+	position: absolute;
+	top: 40px;
+}
+
+.contacts {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contacts-icon {
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: 60%;	
+	background-position: center;
+}
+
+.contacts > span {
+	background-image: url('./assets/icons_svg/ig_icon.svg');
+}
+
+.phone-wrapper { 
+    display: flex;
+    align-items: center;
+}
+
+.phone-wrapper > span {
+	background-image: url('./assets/icons_svg/wup_icon.svg');
+}
+
+.phone {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+/* Hero section */
+.hero-section {
+	background-image: url('./assets/ballroom_dance_lessons/hero_bg_768.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.main-title {
+	width: fit-content;
+    font-size: var(--fs-900);
+    text-align: right;
+    line-height: .8;
+}
+
+.hero-content {
+	padding-top: 15rem;
+	padding-bottom: 10rem;
+}
+
+.hero-content-top {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 5em;
+	justify-content: center;
+}
+
+.word-hook {
+	position: relative;
+}
+
+.word-hook::before {
+	content: 'lessons';
+	font-family: 'Work Sans', sans-serif;
+	font-size: 2.5rem;
+	font-weight: 300;
+	line-height: 1.2;
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.map-img {
+    display: block;
+    background-image: url(./assets/ballroom_dance_lessons/map.svg);
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position-x: center;
+    width: 375px;
+    height: 229px;
+}
+
+.label {
+	display: block;
+	width: 100%;
+    text-align: right;
+}
+
+/* Dance teachers section */
+.teachers-section h2 {
+	text-align: center;
+}
+
+.teahers-names {
+    font-size: 3.5rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 325px;
+    margin-inline: auto;
+}
+
+.teahers-names span:last-child {
+	align-self: flex-end;
+}
+
+.image-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.teachers-text {
+	max-width: 75ch;
+	padding-block: 2rem;
+}
+
+.video-container {
+	padding-bottom: 8rem;
+}
+
+/* We can teach section */
+.styles-bg {
+	background-image: url('./assets/we_can_teach/dance_styles_bg.jpg');
+	background-size: cover;
+	background-position: center;	
+}
+
+.list-wrapper {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.styles-list {
+	padding-block: 5.4rem;
+	font-size: 1.8rem;
+	align-self: center;
+}
+
+/* Dance lessons are suitable section */
+.description-section h2 {
+	width: 75%;
+}
+
+.description-section .content-top {
+	margin-top: 3rem;
+}
+
+.description-section .content-text {
+	max-width: 385px;
+}
+/* Why dance? section */
+.advantages-section h2 {
+	text-align: right;
+}
+
+.advantages-bg {
+	background-image: url('./assets/why_dance/advantages_bg.jpg');
+	background-size: cover;
+	background-position: center;	
+}
+
+.advantages-section .content {
+	padding-block: 3rem;
+}
+
+.quote-text,
+.advantages-list {
+	max-width: 385px;
+}
+/* Let’s dance! section */
+.cta .content-top {
+	margin-top: 3rem;
+}
+
+.cta .content-text {
+	max-width: 385px;
+	margin-top: 3rem;
+}
+.cta .phone-wrapper > span {
+	background-image: url('./assets/icons_svg/wup_icon_dark.svg');
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg-color);
+}
+
+.footer-content {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	padding-block: 2rem;
+}
+
+.social-links {
+	display: flex;
+}
+
+.social-links .contacts-icon {
+	background-size: 90%;
+}
+
+.social-links span:first-child {
+	background-image: url('./assets/icons_svg/ig_icon_white.svg');	
+}
+
+.social-links span:nth-child(2) {
+	background-image: url('./assets/icons_svg/wup_icon_white.svg');	
+}
+
+
+
+/* Media queries */
+@media (min-width: 746px) {
+	:root {
+		--fs-600: 4.5rem;
+		--fs-400: 1.8rem;
+	}
+
+	.contacts {
+		justify-content: flex-end;
+	}
+
+	.hero-content {
+		max-width: 690px;
+		margin-inline: auto;
+	}
+
+	.hero-content-top {
+   		justify-content: space-between;
+   		height: 220px;
+   	}
+
+   	.map-img {
+   		width: 272px;
+    	height: 195px;
+    	background-size: 100%;
+    	align-self: flex-end;
+   	}
+
+   	.label {
+   		font-size: 1.2rem;
+   	}
+
+   	.teachers-section h2 {
+   		text-align: right;
+   	}
+
+   	.teahers-names {
+		font-size: 4.5rem;
+		margin-top: 2rem;
+		max-width: 545px;
+    	margin-inline: unset;
+	}
+
+	.image-wrapper {
+		flex-direction: row;
+		margin-top: 4rem;
+	}
+
+   	.teachers-text {
+		padding-block: 4rem;
+	}
+
+	.video-container {
+		padding-bottom: 18rem;
+	}
+
+	.styles-list {
+		padding-block: 12rem;
+		font-size: 2.5rem;
+	}
+
+	.description-section h2 {
+		text-align: center;
+	}
+
+	.description-section .content-top {
+		margin-top: 4rem;
+	}
+
+	.advantages-section h2 {
+		text-align: center;
+	}
+
+	.advantages-section .content {
+		padding-block: 5.5rem;
+	}
+
+	.cta .content-top {
+		margin-top: 1rem;
+	}
+
+	.cta .content-text {
+		margin-top: 0;
+	}
+
+   	.footer-content {
+   		flex-direction: row;
+    	justify-content: center;
+   	}
+
+   	.footer-content > span {
+   		margin-inline: auto;
+   	}
+}
+
+@media (min-width: 1280px) {
+	:root {
+		--fs-900: 15rem;
+		--fs-600: 6.5rem;
+		--fs-400: 2rem;
+	}
+
+	.wrapper {
+		width: 75%;
+	}
+
+	.contacts {
+		column-gap: 2px;
+	}
+
+	.phone {
+		font-size: 2.5rem;
+		column-gap: 8px;
+	}
+
+	.contacts-icon {
+		background-size: 80%;
+	}
+
+	.hero-content {
+		padding-top: 20rem;
+		max-width: 1200px;
+		margin-inline: auto;
+	}
+
+	.hero-content-top {
+   		height: 322px;
+   	}
+
+   	.map-img {
+   		width: 375px;
+    	height: 229px;
+   	}
+
+   	.label {
+   		font-size: 1.6rem;
+   		margin-block: 4rem;
+   	}
+
+   	.teahers-names {
+		margin-top: 4rem;
+	}
+
+	.image-wrapper {
+		margin-top: 6rem;
+	}
+
+	.teachers-text {
+		padding-block: 5rem;
+	}
+
+	.video-container {
+		padding-bottom: 32rem;
+	}
+
+	.styles-list {
+		padding-block: 25.6rem;
+		font-size: 4rem;
+	}
+
+	.description-section h2 {
+		width: 100%;
+	}
+
+	.description-section .content-top {
+		margin-top: 5rem;
+	}
+
+	.advantages-section .content {
+		padding-block: 11.5rem;
+	}
+
+	.cta .content-top {
+		margin-top: 4.6rem;
+	}
+}
