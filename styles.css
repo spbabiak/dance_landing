@@ -351,8 +351,14 @@ footer {
 .social-links span:nth-child(2) {
 	background-image: url('./assets/icons_svg/wup_icon_white.svg');	
 }
+.content-top {
+	display: flex;
+}
 
-
+.content-bottom {
+	display: flex;
+	flex-direction: row-reverse;
+}
 
 /* Media queries */
 @media (min-width: 746px) {
